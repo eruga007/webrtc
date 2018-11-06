@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>การใช้ JavaScript ในการควบคุม video</title>
+</head>
+
+<body>
+    <video id="videoTag" width="1024">
+        <source src="media/test.mp4">
+    </video>
+    <button onclick="playPause()">
+        Play/Pause
+    </button>
+    <button onclick="big()">
+        Big
+    </button>
+    <button onclick="small()">
+        Small
+    </button>
+    <script>
+        var myVideo = document.getElementById("videoTag");
+        function playPause() {
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+
+        }
+        function big() {
+            myVideo.width = 1280;
+        }
+        function small() {
+            myVideo.width = 640;
+        }
+    </script>
+</body>
+
+</html>
